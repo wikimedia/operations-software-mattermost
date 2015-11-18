@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>http://docs.mattermost.org/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>http://docs.mattermost.org/help/Manage-Members/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.mattermost.org/help/README/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.mattermost.org/help/Search/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.mattermost.org/help/Slack-Import/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.mattermost.org/help/Team-Statistics/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://docs.mattermost.org/developer/API-Web-Service/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.mattermost.org/developer/API/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.mattermost.org/developer/Code-Contribution-Guidelines/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.mattermost.org/developer/Setup/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.mattermost.org/developer/Style-Guide/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.mattermost.org</loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://docs.mattermost.org/install/Administration/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.mattermost.org/install/Amazon-Elastic-Beanstalk/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.mattermost.org/install/Configuration-Settings/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.mattermost.org/install/Docker-Single-Container/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.mattermost.org/install/Production-Debian/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.mattermost.org/install/Production-Ubuntu/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.mattermost.org/install/Release-Numbering/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.mattermost.org/install/Requirements/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.mattermost.org/install/SMTP-Email-Setup/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.mattermost.org/install/Troubleshooting/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.mattermost.org/install/Upgrade-Guide/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://docs.mattermost.org</loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.mattermost.org</loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.mattermost.org</loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://docs.mattermost.org/process/documentation-guidelines/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.mattermost.org/process/release-process/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://docs.mattermost.org/usage/Markdown/index.html</loc>
+     <lastmod>2015-11-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+</urlset>

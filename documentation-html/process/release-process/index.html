@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="http://docs.mattermost.org/process/release-process/index.html">
+        <link rel="shortcut icon" href="../../../../favicon.ico">
+        
+
+	<title>Release process - Mattermost Documentation</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../index.html">Mattermost Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../index.html">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../help/Manage-Members/index.html">Manage Members</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../help/README/index.html">README</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../help/Search/index.html">Search</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../help/Slack-Import/index.html">Slack Import</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../help/Team-Statistics/index.html">Team Statistics</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Developer <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../developer/API-Web-Service/index.html">API Web Service</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../developer/API/index.html">API</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../developer/Code-Contribution-Guidelines/index.html">Code Contribution Guidelines</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../developer/Setup/index.html">Setup</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../developer/Style-Guide/index.html">Style Guide</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Tests</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../developer/tests/test-emoticons/index.html">Test emoticons</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Install <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../install/Administration/index.html">Administration</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../install/Amazon-Elastic-Beanstalk/index.html">Amazon Elastic Beanstalk</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../install/Configuration-Settings/index.html">Configuration Settings</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../install/Docker-Single-Container/index.html">Docker Single Container</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../install/Production-Debian/index.html">Production Debian</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../install/Production-Ubuntu/index.html">Production Ubuntu</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../install/Release-Numbering/index.html">Release Numbering</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../install/Requirements/index.html">Requirements</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../install/SMTP-Email-Setup/index.html">SMTP Email Setup</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../install/Troubleshooting/index.html">Troubleshooting</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../install/Upgrade-Guide/index.html">Upgrade Guide</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Integrations <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Single Sign On</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../integrations/Single-Sign-On/Gitlab/index.html">Gitlab</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Webhooks</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../integrations/webhooks/Incoming-Webhooks/index.html">Incoming Webhooks</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../integrations/webhooks/Outgoing-Webhooks/index.html">Outgoing Webhooks</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Services</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../integrations/services/Gitlab-Integration-Service-for-Mattermost/index.html">Gitlab Integration Service for Mattermost</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Process <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../documentation-guidelines/index.html">Documentation guidelines</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="index.html">Release process</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usage <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../usage/Markdown/index.html">Markdown</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../documentation-guidelines/index.html">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../../usage/Markdown/index.html">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://github.com/mattermost/platform">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#-beginning-of-release">- Beginning of release</a></li>
+        
+    
+        <li class="main "><a href="#-10-weekdays-before-release-date-cut-off-for-major-features">- (10 weekdays before release date) Cut-off for major features</a></li>
+        
+    
+        <li class="main "><a href="#-8-weekdays-before-release-date-feature-complete-and-stabilization">- (8 weekdays before release date) Feature Complete and Stabilization</a></li>
+        
+    
+        <li class="main "><a href="#-5-weekdays-before-release-date-code-complete-and-release-candidate-cut">- (5 weekdays before release date) Code Complete and Release Candidate Cut</a></li>
+        
+    
+        <li class="main "><a href="#-4-weekdays-before-release-date-release-candidate-testing">- (4 weekdays before release date) Release Candidate Testing</a></li>
+        
+    
+        <li class="main "><a href="#-2-weekdays-before-release-date-release">- (2 weekdays before release date) Release</a></li>
+        
+    
+        <li class="main "><a href="#-0-weekdays-before-release-date-end-of-release">- (0 weekdays before release date) End of Release</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p>We're working on making internal processes in the Mattermost core team more transparent for the community. Below is a working draft of our software development process, which will be updated live as we refine our process.</p>
+<p>Questions, feedback, comments always welcome, </p>
+<hr />
+<p>Mattermost core team works on a monthly release process, with a new version shipping on the 16th of each month. </p>
+<p>This document outlines the development process for the Mattermost core team, which draws from what we find works best for us from Agile, Scrum and Software Development Lifecycle approaches.</p>
+<p>This is a working document that will update as our process evolves.</p>
+<h3 id="-beginning-of-release">- Beginning of release</h3>
+<ul>
+<li>(Ops) Queue an agenda item for first team meeting of the release to review Roadmap</li>
+</ul>
+<h3 id="-10-weekdays-before-release-date-cut-off-for-major-features">- (10 weekdays before release date) Cut-off for major features</h3>
+<ul>
+<li>No major features can be committed to the current release after this date</li>
+<li>(Dev) Prioritize reviewing, updating, and merging of all pull requests that are going to make it into the release </li>
+<li>There should be no more tickets in the <a href="https://github.com/mattermost/platform/pulls">pull request queue</a> marked for the current release</li>
+<li>(Leads) Meets to prioritize the final tickets of the release</li>
+<li>Backlog is reviewed and major features that won’t make it are moved to next release</li>
+<li>Triage tickets</li>
+<li>Review roadmap for next release</li>
+<li>(Marketing) Writes the "Highlights" section of the Changelog</li>
+<li>(PM) Write compatibility updates for config.json and database changes <a href="https://github.com/mattermost/platform/blob/master/CHANGELOG.md#compatibility">See example</a></li>
+<li>(PM) Update <a href="https://github.com/mattermost/platform/blob/master/doc/install/Upgrade-Guide.md">Upgrade Guide</a> for any steps needed to upgrade to new version</li>
+<li>(PM) Prepare tickets for cutting RCs builds, filing issue in GitLab omnibus to take RC candidate, testing GitLab RC with Mattermost</li>
+<li>(Stand-up) Each team member discusses worst bug</li>
+</ul>
+<h3 id="-8-weekdays-before-release-date-feature-complete-and-stabilization">- (8 weekdays before release date) Feature Complete and Stabilization</h3>
+<ul>
+<li>After the cut-off time for Feature Complete, Dev prioritizes reviewing PRs and committing to master so Stabilization period can begin, with testing and high priority bug fixes</li>
+<li>During Stabilization period only BUGS can be committed to master, non-bug tickets are tagged for next version and wait until after a release candidate is cut to be added to master</li>
+<li>(PM) Review all <a href="https://mattermost.atlassian.net/secure/IssueNavigator.jspa?mode=hide&amp;requestId=10600">S1 bugs</a> and mark important ones as high priority</li>
+<li>(Dev + PM) Exceptions can be made by triage team consensus across PM and Dev. List of approved changes for release candidate 1 here: https://mattermost.atlassian.net/issues/?filter=10204</li>
+<li>(PM) Documentation </li>
+<li>(PM) Make Changelog PR with updates for latest feature additions and changes</li>
+<li>(PM) Make Changelog PR with updates to contributors</li>
+<li>(PM) Make NOTICE.txt PR for any new libraries added from dev, if not added already </li>
+<li>(PM) Prioritize any developer documentation tickets</li>
+<li>(PM and devs) Sign-off testing of their feature areas (i.e. PM/dev either signs-off that their area is well tested, or they flag that potential quality issues may exist)</li>
+<li>(Ops) Mail out mugs to any new contributors</li>
+<li>(Team) Select "Top Contributor" for the release from external contributions to be mentioned in release announcement</li>
+<li>(Marketing) Decides announce date (discuss in meeting)</li>
+<li>(Ops) Post Announce Date in Release channel + update the channel header to reflect date</li>
+<li>(Marketing) Communicates checklist of items needed by specific dates to write the blog post announce (e.g. screenshots, GIFs, documentation) and begins to write the blog post, tweet, and email for the release announcement</li>
+<li>(PM) Works with Ops to check the Quality Gate for feature complete</li>
+<li>(PM) Communicate to team the plan for next release</li>
+<li>(Stand-up) Each team member discusses worst bug</li>
+</ul>
+<h3 id="-5-weekdays-before-release-date-code-complete-and-release-candidate-cut">- (5 weekdays before release date) Code Complete and Release Candidate Cut</h3>
+<ul>
+<li>(Team) Meets to discuss release at 10am PST </li>
+<li>(PM) Each area changed in latest release is assigned a PM owner to lead testing</li>
+<li>(Ops) Walks through each item of the <strong>Code Complete and Release Candidate Cut</strong> checklist</li>
+<li>(Dev) Last check of tickets that need to be merged before RC1</li>
+<li>(Team) Each team member discusses worst bug</li>
+<li>After 10am PST meeting the release is considered “Code Complete”. </li>
+<li>(Dev) Completes final reviews and updates of PRs marked for the release version <ul>
+<li>There should be no more tickets in the <a href="https://github.com/mattermost/platform/pulls">pull request queue</a> marked for the current release</li>
+</ul>
+</li>
+<li>Master is tagged and branched and “Release Candidate 1″ is cut (e.g. 1.1.0-RC1) according to the Release Candidate Checklist</li>
+<li>(PM) Create meta issue for regressions in GitHub (see <a href="https://github.com/mattermost/platform/issues/574">example</a>)</li>
+</ul>
+<h3 id="-4-weekdays-before-release-date-release-candidate-testing">- (4 weekdays before release date) Release Candidate Testing</h3>
+<ul>
+<li>Final testing is conducted by the team on the acceptance server and any issues found are filed</li>
+<li>(Dev) Tests upgrade from previous version to current version, following the <a href="https://github.com/mattermost/platform/blob/master/doc/install/Upgrade-Guide.md">Upgrade Guide</a> </li>
+<li>(Ops) Posts copy of the <strong>Release Candidate Testing</strong> checklist into Town Square in PRODUCTION <ul>
+<li>(Ops) Moves meeting, test and community channels over to the production version of RC, and posts in Town Square asking everyone to move communication over to the new team for testing purposes</li>
+<li>(PM) Test feature areas and post bugs to Bugs/Issues in PRODUCTION </li>
+<li>(Ops) Runs through general testing checklist on RC1 and post bugs to Bugs/Issues in PRODUCTION </li>
+</ul>
+</li>
+<li>(PM &amp; DEV) Add <strong>#p1</strong> tag to any “Blocking” issue that looks like a hotfix to the RC is needed, and create a public ticket in Jira. Blocking issues are considered to be security issues, data loss issues, issues that break core functionality, or significantly impact aesthetics. </li>
+<li>(PM) Updates the GitHub meta issue</li>
+<li>(PM) Posts links to all issues found in RC as comments on the meta issue</li>
+<li>(PM) Updates description to include approved fixes</li>
+<li>(PM) Posts screenshot and link to final tickets for next RC to the Release room</li>
+<li>(PM &amp; DEV leads) Triage hotfix candidates and decide on whether and when to cut next RC or final</li>
+<li>(Dev) PRs for hotfixes made to release branch, and changes from release branch are merged into master</li>
+<li>(Ops) Tests approved fixes on master</li>
+<li>(Dev) Pushes next RC to acceptance after testing is complete and approved fixes merged</li>
+<li>(Dev) pushes next RC to acceptance and announces in Town Square on PRODUCTION </li>
+<li>(PM) closes the meta issue after the next RC is cut, and opens another ticket for new RC</li>
+<li>(Ops) verifies each of the issues in meta ticket is fixed</li>
+<li>(PM) If no blocking issues are found, PM, Dev and Ops signs off on the release</li>
+</ul>
+<h3 id="-2-weekdays-before-release-date-release">- (2 weekdays before release date) Release</h3>
+<ul>
+<li>(Dev) Tags a new release (e.g. 1.1.0) and runs an official build which should be essentially identical to the last RC</li>
+<li>(PM) Any significant issues that were found and not fixed for the final release are noted in the release notes</li>
+<li>If an urgent and important issue needs to be addressed between major releases, a hotfix release (e.g. 1.1.1) may be released, however this should be very rare, given a monthly cadence</li>
+<li>(PM) Copy and paste the Release Notes from the Changelog to the Release Description</li>
+<li>(PM) Update the mattermost.org/download page</li>
+<li>(Dev) Delete RCs after final version is shipped</li>
+<li>(PM) Close final GitHub RC meta ticket</li>
+</ul>
+<h3 id="-0-weekdays-before-release-date-end-of-release">- (0 weekdays before release date) End of Release</h3>
+<ul>
+<li>(PM) Makes sure marketing has been posted (animated GIFs, screenshots, mail announcement, Tweets, blog posts) </li>
+<li>(PM) Close the release in Jira</li>
+<li>(Dev) Check if any libraries need to be updated for the next release, and if so bring up in weekly team meeting</li>
+<li>(Ops) Post important dates for the next release in the header of the Release channel</li>
+<li>(Ops) Queue an agenda item for next team meeting for "Stepping Back" Q&amp;A</li>
+<li>(Ops) Queue an agenda item for next team meeting for Roadmap review</li>
+</ul></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+                <p>Copyright (c) 2015 Mattermost, Inc. All Rights Reserved.</p>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

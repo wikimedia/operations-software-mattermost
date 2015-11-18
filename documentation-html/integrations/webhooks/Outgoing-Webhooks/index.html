@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="http://docs.mattermost.org/integrations/webhooks/Outgoing-Webhooks/index.html">
+        <link rel="shortcut icon" href="../../../../../../favicon.ico">
+        
+
+	<title>Outgoing Webhooks - Mattermost Documentation</title>
+
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../../css/highlight.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../../index.html">Mattermost Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../../index.html">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../help/Manage-Members/index.html">Manage Members</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../help/README/index.html">README</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../help/Search/index.html">Search</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../help/Slack-Import/index.html">Slack Import</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../help/Team-Statistics/index.html">Team Statistics</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Developer <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../developer/API-Web-Service/index.html">API Web Service</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../developer/API/index.html">API</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../developer/Code-Contribution-Guidelines/index.html">Code Contribution Guidelines</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../developer/Setup/index.html">Setup</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../developer/Style-Guide/index.html">Style Guide</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Tests</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../../developer/tests/test-emoticons/index.html">Test emoticons</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Install <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../install/Administration/index.html">Administration</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../install/Amazon-Elastic-Beanstalk/index.html">Amazon Elastic Beanstalk</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../install/Configuration-Settings/index.html">Configuration Settings</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../install/Docker-Single-Container/index.html">Docker Single Container</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../install/Production-Debian/index.html">Production Debian</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../install/Production-Ubuntu/index.html">Production Ubuntu</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../install/Release-Numbering/index.html">Release Numbering</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../install/Requirements/index.html">Requirements</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../install/SMTP-Email-Setup/index.html">SMTP Email Setup</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../install/Troubleshooting/index.html">Troubleshooting</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../install/Upgrade-Guide/index.html">Upgrade Guide</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Integrations <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Single Sign On</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Single-Sign-On/Gitlab/index.html">Gitlab</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Webhooks</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../Incoming-Webhooks/index.html">Incoming Webhooks</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="index.html">Outgoing Webhooks</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Services</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../services/Gitlab-Integration-Service-for-Mattermost/index.html">Gitlab Integration Service for Mattermost</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Process <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../process/documentation-guidelines/index.html">Documentation guidelines</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../../process/release-process/index.html">Release process</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usage <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../../usage/Markdown/index.html">Markdown</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../Incoming-Webhooks/index.html">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../../services/Gitlab-Integration-Service-for-Mattermost/index.html">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://github.com/mattermost/platform">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#outgoing-webhooks">Outgoing Webhooks</a></li>
+        
+            <li><a href="#build-break-project-x-december-12-2015-1532-gmt-0">Build Break - Project X - December 12, 2015 - 15:32 GMT +0</a></li>
+        
+            <li><a href="#enabling-outgoing-webhooks">Enabling Outgoing Webhooks</a></li>
+        
+            <li><a href="#set-up-an-outgoing-webhook">Set Up an Outgoing Webhook</a></li>
+        
+            <li><a href="#creating-integrations-using-outgoing-webhooks">Creating Integrations using Outgoing Webhooks</a></li>
+        
+            <li><a href="#slack-compatibility">Slack Compatibility</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="outgoing-webhooks">Outgoing Webhooks</h1>
+<p>Outgoing webhooks allow external applications, written in the programming language of your choice--to receive HTTP POST requests whenever a user posts to a certain channel, with a trigger word at the beginning of the message, or a combination of both. If the external application responds appropriately to the HTTP request, as response post can be made in the channel where the original post occurred.</p>
+<p>A couple key points:</p>
+<ul>
+<li><strong>Mattermost outgoing webhooks are Slack-compatible.</strong> If you've used Slack's outgoing webhooks to create integrations, you can copy and paste that code to create Mattermost integrations. Mattermost automatically translates Slack's proprietary JSON payload format into markdown to render in Mattermost messages</li>
+<li><strong>Mattermost outgoing webhooks support full markdown.</strong> When an integration responds with a message to post, it will have access to a rich range of formatting unavailable in Slack that is made possible through <a href="../../../usage/Markdown/index.html">markdown support</a> in Mattermost. This includes headings, formatted fonts, tables, inline images and other options supported by [Mattermost Markdown]</li>
+</ul>
+<p><em>Example:</em></p>
+<p>Suppose you had an external application that recieved a post event whenever a message starting with <code>#build</code>. If a user posted the message <code>#build Let's see the status</code>, then the external application would receive an HTTP POST with data about that message. The application could then respond with a table of total tests run and total tests failed by component category, with links to failed tests by category. An example response might be:</p>
+<pre><code>{&quot;text&quot;: &quot;
+---
+##### Build Break - Project X - December 12, 2015 - 15:32 GMT +0
+| Component  | Tests Run   | Tests Failed                                   |
+|:-----------|:------------|:-----------------------------------------------|
+| Server     | 948         | :white_check_mark: 0                           |
+| Web Client | 123         | :warning: [2 (see details)](http://linktologs) |
+| iOS Client | 78          | :warning: [3 (see details)](http://linktologs) |
+---
+&quot;}
+</code></pre>
+
+<p>Which would render in a Mattermost message as follows:</p>
+<hr />
+<h5 id="build-break-project-x-december-12-2015-1532-gmt-0">Build Break - Project X - December 12, 2015 - 15:32 GMT +0</h5>
+<table>
+<thead>
+<tr>
+<th align="left">Component</th>
+<th align="left">Tests Run</th>
+<th align="left">Tests Failed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Server</td>
+<td align="left">948</td>
+<td align="left">:white_check_mark: 0</td>
+</tr>
+<tr>
+<td align="left">Web Client</td>
+<td align="left">123</td>
+<td align="left">:warning: <a href="http://linktologs">2 (see details)</a></td>
+</tr>
+<tr>
+<td align="left">iOS Client</td>
+<td align="left">78</td>
+<td align="left">:warning: <a href="http://linktologs">3 (see details)</a></td>
+</tr>
+<tr>
+<td align="left">---</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="enabling-outgoing-webhooks">Enabling Outgoing Webhooks</h3>
+<p>Outgoing webhooks are off by default, and can be enabled by the system administrator. If you are the system administrator you can enable them by doing the following:</p>
+<ol>
+<li>Login to your Mattermost team account that has the system administrator role.</li>
+<li>Enable outgoing webhooks from <strong>System Console -&gt; Service Settings</strong>.</li>
+<li>(Optional) Configure the <strong>Enable Overriding of Usernames from Webhooks</strong> option to allow external applications to post messages under any name. If not enabled, the username of the creator of the webhook URL is used to post messages.</li>
+<li>(Optional) Configure the <strong>Enable Overriding of Icon from Webhooks</strong> option to allow external applciations to change the icon of the account posting messages. If not enabled, the icon of the creator of the webhook URL is used to post messages.</li>
+</ol>
+<h3 id="set-up-an-outgoing-webhook">Set Up an Outgoing Webhook</h3>
+<p>Once outgoing webhooks are enabled, you will be able to set one up through the Mattermost UI. You will need to know the following</p>
+<ol>
+<li>The channel (if not all of them) you want to listen to post events from</li>
+<li>The trigger words (if any) that will trigger a post event if they are the <strong>first word</strong> of the post</li>
+<li>The URL you want Mattermost to report the events to</li>
+</ol>
+<p>Once you have those, you can follow these steps to set up your webhook:</p>
+<ol>
+<li>Login to your Mattermost team site and go to <strong>Account Settings -&gt; Integrations</strong></li>
+<li>Next to <strong>Outgoing Webhooks</strong> click <strong>Edit</strong></li>
+<li>Under <strong>Add a new outgoing webhook</strong> select your options</li>
+<li>Select a channel from the <strong>Channel</strong> dropdown to only report events from a certain channel (optional if Trigger Words selected)</li>
+<li>Enter comma separated words into <strong>Trigger Words</strong> to only report events from posts that start with one of those words (optional if <strong>Channel</strong> selected)</li>
+<li>Enter new line separated URLs that the post events will be sent too</li>
+<li>Click <strong>Add</strong> to add your webhook to the system</li>
+<li>Your new outgoing webhook will be displayed below with a <strong>Token</strong> that any external application that wants to listen to the webhook should ask for in it's instructions</li>
+</ol>
+<h3 id="creating-integrations-using-outgoing-webhooks">Creating Integrations using Outgoing Webhooks</h3>
+<p>If you'd like to build your own integration that uses outgoing webhooks, you can follow these general guidelines:</p>
+<ol>
+<li>In the programming language of your choice, write your integration to perform what you had in mind</li>
+<li>
+<p>Your integration should have a function for receiving HTTP POSTs from Mattermost that look like this example:
+  ```
+    Content-Length: 244
+    User-Agent: Go 1.1 package http
+    Host: localhost:5000
+    Accept: application/json
+    Content-Type: application/x-www-form-urlencoded</p>
+<p>channel_id=hawos4dqtby53pd64o4a4cmeoo&amp;
+channel_name=town-square&amp;
+team_domain=someteam&amp;
+team_id=kwoknj9nwpypzgzy78wkw516qe&amp;
+text=some text here&amp;
+timestamp=1445532266&amp;
+token=zmigewsanbbsdf59xnmduzypjc&amp;
+trigger_word=some&amp;
+user_id=rnina9994bde8mua79zqcg5hmo&amp;
+user_name=somename
+  <code>2. Your integration must have a configurable **MATTERMOST_TOKEN** variable that is the Token given to you when you set up the outgoing webhook in Mattermost as decribed in the previous section _Set Up an Outgoing Webhook_. This configurable **MATTERMOST_TOKEN** must match the token in the request body so your application can be sure the request came from Mattermost
+ 3. If you want your integration to post a message back to the same channel, it can respond to the HTTP POST request from Mattermost with a JSON response body similar to this example:</code>
+  {
+"text": "This is some response text."
+  }
+  ```
+3. Set up your integration running on Heroku, an AWS server or a server of your own to start getting real time post events from Mattermost channels</p>
+</li>
+</ol>
+<p>Additional Notes:</p>
+<ol>
+<li>
+<p>With <strong>Enable Overriding of Usernames from Webhooks</strong> turned on,  you can also override the username the message posts as by providing a <code>username</code> parameter in your JSON payload. For example, you might want your message looking like it came from a robot so you can use the JSON response <code>{"username": "robot", "text": "Hello, this is some text."}</code> to change the username of the post to robot. Note, to combat any malicious users from trying to use this to perform <a href="https://en.wikipedia.org/wiki/Phishing">phishing attacks</a> a <code>BOT</code> indicator appears next to posts coming from webhooks</p>
+</li>
+<li>
+<p>With <strong>Enable Overriding of Icon from Webhooks</strong> turned on, you can similarly change the icon the message posts with by providing a link to an image in the <code>icon_url</code> parameter of your JSON response. For example, <code>{"icon_url": "http://somewebsite.com/somecoolimage.jpg", "text": "Hello, this is some text."}</code> will post using whatever image is located at <code>http://somewebsite.com/somecoolimage.jpg</code> as the icon for the post</p>
+</li>
+<li>
+<p>Also, as mentioned previously, <a href="../../../usage/Markdown/index.html">markdown</a> can be used to create richly formatted payloads, for example: <code>payload={"text": "# A Header\nThe _text_ below **the** header."}</code> creates a messages with a header, a carriage return and bold text for "the"</p>
+</li>
+<li>
+<p>Just like regular posts, the text will be limited to 4000 characters at maximum</p>
+</li>
+</ol>
+<h3 id="slack-compatibility">Slack Compatibility</h3>
+<p>As mentioned above, Mattermost makes it easy to take integrations written for Slack's proprietary JSON payload format and repurpose them to become Mattermost integrations. The following automatic translations are supported:</p>
+<ol>
+<li>The HTTP POST request body is formatted the same as Slack's, which means your Slack integration's receiving function should not need to change at all to be compatible with Mattermost</li>
+<li>JSON responses designed for Slack using <code>&lt;&gt;</code> to note the need to hyperlink a URL, such as <code>{"text": "&lt;http://www.mattermost.com/&gt;"}</code>, are translated to the equivalent markdown in Mattermost and rendered the same as you would see in Slack</li>
+<li>Similiarly, responses designed for Slack using <code>|</code> within a <code>&lt;&gt;</code> to define linked text, such as <code>{"text": "Click &lt;http://www.mattermost.com/|here&gt; for a link."}</code>, are also translated to the equivalent markdown in Mattermost and rendered the same as you would see in Slack</li>
+</ol>
+<p>To see samples and community contributions, please visit <a href="http://mattermost.org/webhooks">http://mattermost.org/webhooks</a>.</p>
+<h4 id="known-issues-in-v11">Known Issues in v1.1</h4>
+<ul>
+<li>Overriding of usernames does not yet apply to notifications</li>
+<li>Cannot supply <code>icon_emoji</code> to override the message icon</li>
+</ul></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+                <p>Copyright (c) 2015 Mattermost, Inc. All Rights Reserved.</p>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../../js/highlight.pack.js"></script>
+        <script>var base_url = '../../..';</script>
+        <script data-main="../../../mkdocs/js/search.js" src="../../../mkdocs/js/require.js"></script>
+        <script src="../../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

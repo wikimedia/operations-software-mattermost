@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="http://docs.mattermost.org/install/SMTP-Email-Setup/index.html">
+        <link rel="shortcut icon" href="../../../../favicon.ico">
+        
+
+	<title>SMTP Email Setup - Mattermost Documentation</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../index.html">Mattermost Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../index.html">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../help/Manage-Members/index.html">Manage Members</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../help/README/index.html">README</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../help/Search/index.html">Search</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../help/Slack-Import/index.html">Slack Import</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../help/Team-Statistics/index.html">Team Statistics</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Developer <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../developer/API-Web-Service/index.html">API Web Service</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../developer/API/index.html">API</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../developer/Code-Contribution-Guidelines/index.html">Code Contribution Guidelines</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../developer/Setup/index.html">Setup</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../developer/Style-Guide/index.html">Style Guide</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Tests</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../developer/tests/test-emoticons/index.html">Test emoticons</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Install <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../Administration/index.html">Administration</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../Amazon-Elastic-Beanstalk/index.html">Amazon Elastic Beanstalk</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../Configuration-Settings/index.html">Configuration Settings</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../Docker-Single-Container/index.html">Docker Single Container</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../Production-Debian/index.html">Production Debian</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../Production-Ubuntu/index.html">Production Ubuntu</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../Release-Numbering/index.html">Release Numbering</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../Requirements/index.html">Requirements</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="index.html">SMTP Email Setup</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../Troubleshooting/index.html">Troubleshooting</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../Upgrade-Guide/index.html">Upgrade Guide</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Integrations <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Single Sign On</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../integrations/Single-Sign-On/Gitlab/index.html">Gitlab</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Webhooks</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../integrations/webhooks/Incoming-Webhooks/index.html">Incoming Webhooks</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../integrations/webhooks/Outgoing-Webhooks/index.html">Outgoing Webhooks</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Services</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../integrations/services/Gitlab-Integration-Service-for-Mattermost/index.html">Gitlab Integration Service for Mattermost</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Process <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../process/documentation-guidelines/index.html">Documentation guidelines</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../process/release-process/index.html">Release process</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usage <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../usage/Markdown/index.html">Markdown</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../Requirements/index.html">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../Troubleshooting/index.html">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://github.com/mattermost/platform">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#smtp-email-setup">SMTP Email Setup</a></li>
+        
+            <li><a href="#how-to-enable-email">How to enable email</a></li>
+        
+            <li><a href="#known-good-sample-settings">Known Good Sample Settings</a></li>
+        
+            <li><a href="#troubleshooting-smtp">Troubleshooting SMTP</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h2 id="smtp-email-setup">SMTP Email Setup</h2>
+<p>In product evaluation setups with single-container Docker instances, email is intentionally disabled. This allows account creation and system operation without having to set up email, but it also means email notification and password reset functionality aren't available. </p>
+<h3 id="how-to-enable-email">How to enable email</h3>
+<p>To enable email, configure an SMTP email service as follows: </p>
+<ol>
+<li>
+<p><strong>Set up an SMTP email sending service</strong> (if you don't yet have an SMTP service with credentials) </p>
+<ol>
+<li>Any SMTP email service can be used, you just need the following information: <code>Server Name</code>, <code>Port</code>, <code>SMTP Username</code>, and <code>SMTP Password</code>. <ol>
+<li>If you don't have an SMTP service, here are simple instructions to set one up with <a href="https://aws.amazon.com/ses/">Amazon Simple Email Service (SES)</a>:<ol>
+<li>Go to <a href="https://console.aws.amazon.com/ses">Amazon SES console</a> then <code>SMTP Settings &gt; Create My SMTP Credentials</code></li>
+<li>Copy the <code>Server Name</code>, <code>Port</code>, <code>SMTP Username</code>, and <code>SMTP Password</code> for Step 2 below. </li>
+<li>From the <code>Domains</code> menu set up and verify a new domain, then enable <code>Generate DKIM Settings</code> for the domain. <ol>
+<li>We recommend you set up <em><a href="https://en.wikipedia.org/wiki/Sender_Policy_Framework">Sender Policy Framework</a> (SPF)</em> and/or <em><a href="https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail">Domain Keys Identified Mail</a> (DKIM)</em> for your email domain.</li>
+</ol>
+</li>
+<li>Choose an sender address like <code>mattermost@example.com</code> and click <code>Send a Test Email</code> to verify setup is working correctly. </li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Configure SMTP settings</strong> </p>
+<ol>
+<li>Open the <strong>System Console</strong> by logging into an existing team and accessing "System Console" from the main menu.<ol>
+<li>Alternatively, if a team doesn't yet exist, go to <code>http://dockerhost:8065/</code> in your browser, create a team, then from the main menu click <strong>System Console</strong></li>
+</ol>
+</li>
+<li>Go to the <strong>Email Settings</strong> tab and configure the following:  <ol>
+<li><strong>Allow Sign Up With Email:</strong> <code>true</code></li>
+<li><strong>Send Email Notifications:</strong> <code>true</code></li>
+<li><strong>Require Email Verification:</strong> <code>true</code></li>
+<li><strong>Notification Display Name:</strong> Display name on email account sending notifications</li>
+<li><strong>Notification Email Address:</strong> Email address displayed on email account used to send notifications</li>
+<li><strong>SMTP Username</strong>: <code>SMTP Username</code> from Step 1</li>
+<li><strong>SMTP Password</strong>: <code>SMTP Password</code> from Step 1</li>
+<li><strong>SMTP Server</strong>: <code>SMTP Server</code> from Step 1</li>
+<li><strong>SMTP Port</strong>: <code>SMTP Port</code> from Step 1</li>
+<li><strong>Connection Security</strong>: <code>TLS (Recommended)</code></li>
+<li>Then click <strong>Save</strong></li>
+<li>Then click <strong>Test Connection</strong></li>
+<li>If the test failed please look in <strong>OTHER</strong> &gt; <strong>Logs</strong> for any errors that look like <code>[EROR] /api/v1/admin/test_email ...</code></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="known-good-sample-settings">Known Good Sample Settings</h3>
+<h5 id="amazon-ses">Amazon SES</h5>
+<ul>
+<li>Set <strong>SMTP Username</strong> to <strong>AKIASKLDSKDIWEOWE</strong></li>
+<li>Set <strong>SMTP Password</strong> to <strong>AdskfjAKLSDJShflsdfjkakldADkjkjdfKAJDSlkjweiqQIWEOU</strong></li>
+<li>Set <strong>SMTP Server</strong> to <strong>email-smtp.us-east-1.amazonaws.com</strong></li>
+<li>Set <strong>SMTP Port</strong> to <strong>465</strong></li>
+<li>Set <strong>Connection Security</strong> to <strong>TLS</strong></li>
+</ul>
+<h5 id="postfix">Postfix</h5>
+<ul>
+<li>Make sure Postfix is installed on the machine where Mattermost is installed</li>
+<li>Set <strong>SMTP Username</strong> to <strong>(empty)</strong></li>
+<li>Set <strong>SMTP Password</strong> to <strong>(empty)</strong></li>
+<li>Set <strong>SMTP Server</strong> to <strong>localhost</strong></li>
+<li>Set <strong>SMTP Port</strong> to <strong>25</strong></li>
+<li>Set <strong>Connection Security</strong> to <strong>(empty)</strong></li>
+</ul>
+<h5 id="gmail">Gmail</h5>
+<ul>
+<li>Set <strong>SMTP Username</strong> to <strong>your_email@gmail.com</strong></li>
+<li>Set <strong>SMTP Password</strong> to <strong>your_password</strong></li>
+<li>Set <strong>SMTP Server</strong> to <strong>smtp.gmail.com</strong></li>
+<li>Set <strong>SMTP Port</strong> to <strong>587</strong></li>
+<li>Set <strong>Connection Security</strong> to <strong>TLS</strong></li>
+</ul>
+<h5 id="office-365">Office 365</h5>
+<ul>
+<li>Set <strong>SMTP Username</strong> to <strong>Office 365 username</strong></li>
+<li>Set <strong>SMTP Password</strong> to <strong>Office 365 password</strong></li>
+<li>Set <strong>SMTP Server</strong> to <strong>smtp.office365.com</strong></li>
+<li>Set <strong>SMTP Port</strong> to <strong>587</strong></li>
+<li>Set <strong>Connection Security</strong> to <strong>TLS</strong></li>
+</ul>
+<h5 id="hotmail">Hotmail</h5>
+<ul>
+<li>Set <strong>SMTP Username</strong> to <strong>your_email@hotmail.com</strong></li>
+<li>Set <strong>SMTP Password</strong> to <strong>your_password</strong></li>
+<li>Set <strong>SMTP Server</strong> to <strong>smtp-mail.outlook.com</strong></li>
+<li>Set <strong>SMTP Port</strong> to <strong>587</strong></li>
+<li>Set <strong>Connection Security</strong> to <strong>STARTTLS</strong></li>
+</ul>
+<h3 id="troubleshooting-smtp">Troubleshooting SMTP</h3>
+<h4 id="tip-1">Tip 1</h4>
+<p>If you fill in <strong>SMTP Username</strong> and <strong>SMTP Password</strong> then you must set <strong>Connection Security</strong> to <strong>TLS</strong> or to <strong>STARTTLS</strong></p>
+<h4 id="tip-2">Tip 2</h4>
+<p>If you have issues with your SMTP install, from your Mattermost team site go to the main menu and open <strong>System Console -&gt; Logs</strong> to look for error messages related to your setup. You can do a search for the error code to narrow down the issue. Sometimes ISPs require nuanced setups for SMTP and error codes can hint at how to make the proper adjustments. </p>
+<p>For example, if <strong>System Console -&gt; Logs</strong> has an error code reading: </p>
+<pre><code>Connection unsuccessful: Failed to add to email address - 554 5.7.1 &lt;unknown[IP-ADDRESS]&gt;: Client host rejected: Access denied
+</code></pre>
+
+<p>Search for <code>554 5.7.1 error</code> and <code>Client host rejected: Access denied</code>.</p>
+<h4 id="tip-3">Tip 3</h4>
+<ul>
+<li>Attempt to telnet to the email service to make sure the server is reachable.</li>
+<li>You must run the following commands from the same machine or virtual instance where <code>mattermost/bin/platform</code> is located.  So if you're running Mattermost from docker you need to <code>docker exec -ti mattermost-dev /bin/bash</code></li>
+<li>Telnet to the email server with <code>telnet mail.example.com 25</code>.  If the command works you should see something like</li>
+</ul>
+<pre><code>Trying 24.121.12.143...
+Connected to mail.example.com.
+220 mail.example.com NO UCE ESMTP
+</code></pre>
+
+<ul>
+<li>Then type something like <code>HELO &lt;your mail server domain&gt;</code>.  If the command works you should see something like</li>
+</ul>
+<pre><code>250-mail.example.com NO UCE
+250-STARTTLS
+250-PIPELINING
+250 8BITMIME
+</code></pre></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+                <p>Copyright (c) 2015 Mattermost, Inc. All Rights Reserved.</p>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

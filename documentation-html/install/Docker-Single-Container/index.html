@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="http://docs.mattermost.org/install/Docker-Single-Container/index.html">
+        <link rel="shortcut icon" href="../../../../favicon.ico">
+        
+
+	<title>Docker Single Container - Mattermost Documentation</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../index.html">Mattermost Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../index.html">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../help/Manage-Members/index.html">Manage Members</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../help/README/index.html">README</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../help/Search/index.html">Search</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../help/Slack-Import/index.html">Slack Import</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../help/Team-Statistics/index.html">Team Statistics</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Developer <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../developer/API-Web-Service/index.html">API Web Service</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../developer/API/index.html">API</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../developer/Code-Contribution-Guidelines/index.html">Code Contribution Guidelines</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../developer/Setup/index.html">Setup</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../developer/Style-Guide/index.html">Style Guide</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Tests</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../developer/tests/test-emoticons/index.html">Test emoticons</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Install <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../Administration/index.html">Administration</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../Amazon-Elastic-Beanstalk/index.html">Amazon Elastic Beanstalk</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../Configuration-Settings/index.html">Configuration Settings</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="index.html">Docker Single Container</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../Production-Debian/index.html">Production Debian</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../Production-Ubuntu/index.html">Production Ubuntu</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../Release-Numbering/index.html">Release Numbering</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../Requirements/index.html">Requirements</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../SMTP-Email-Setup/index.html">SMTP Email Setup</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../Troubleshooting/index.html">Troubleshooting</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../Upgrade-Guide/index.html">Upgrade Guide</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Integrations <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Single Sign On</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../integrations/Single-Sign-On/Gitlab/index.html">Gitlab</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Webhooks</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../integrations/webhooks/Incoming-Webhooks/index.html">Incoming Webhooks</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../integrations/webhooks/Outgoing-Webhooks/index.html">Outgoing Webhooks</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Services</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../integrations/services/Gitlab-Integration-Service-for-Mattermost/index.html">Gitlab Integration Service for Mattermost</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Process <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../process/documentation-guidelines/index.html">Documentation guidelines</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../process/release-process/index.html">Release process</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Usage <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../usage/Markdown/index.html">Markdown</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../Configuration-Settings/index.html">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../Production-Debian/index.html">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://github.com/mattermost/platform">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#local-machine-setup-and-upgrade">Local Machine Setup and Upgrade</a></li>
+        
+            <li><a href="#one-line-docker-install">One-line Docker Install</a></li>
+        
+            <li><a href="#mac-osx">Mac OSX</a></li>
+        
+            <li><a href="#ubuntu">Ubuntu</a></li>
+        
+            <li><a href="#arch">Arch</a></li>
+        
+            <li><a href="#additional-notes">Additional Notes</a></li>
+        
+            <li><a href="#configuration-settings">Configuration Settings</a></li>
+        
+            <li><a href="#upgrading-mattermost">Upgrading Mattermost</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="local-machine-setup-and-upgrade">Local Machine Setup and Upgrade</h1>
+<p>The following install instructions are for single-container installs of Mattermost using Docker for exploring product functionality and upgrading to newer versions.</p>
+<h3 id="one-line-docker-install">One-line Docker Install</h3>
+<p>If you have Docker set up, Mattermost installs in one-line:<br />
+<code>docker run --name mattermost-dev -d --publish 8065:80 mattermost/platform</code></p>
+<p>Otherwise, see step-by-step available: </p>
+<h3 id="mac-osx">Mac OSX</h3>
+<ol>
+<li>Install Docker Toolbox using instructions at: http://docs.docker.com/installation/mac/  <ol>
+<li>Start Docker Toolbox from the command line and run: <code>docker-machine create -d virtualbox dev</code>  </li>
+</ol>
+</li>
+<li>Get your Docker IP address with: <code>docker-machine ip dev</code></li>
+<li>Use <code>sudo nano /etc/hosts</code> to add <code>&lt;Docker IP&gt; dockerhost</code> to your /etc/hosts file </li>
+<li>Run: <code>docker-machine env dev</code> and copy the export statements to your ~/.bash_profile by running <code>sudo nano ~/.bash_profile</code>. Then run: <code>source ~/.bash_profile</code></li>
+<li>Run: <code>docker run --name mattermost-dev -d --publish 8065:80 mattermost/platform</code></li>
+<li>When docker is done fetching the image, open http://dockerhost:8065/ in your browser.</li>
+</ol>
+<h3 id="ubuntu">Ubuntu</h3>
+<ol>
+<li>
+<p>Follow the instructions at https://docs.docker.com/installation/ubuntulinux/ or use the summary below:</p>
+<p><code>bash
+sudo apt-get update
+sudo apt-get install wget
+wget -qO- https://get.docker.com/ | sh
+sudo usermod -aG docker &lt;username&gt;
+sudo service docker start
+newgrp docker</code></p>
+</li>
+<li>
+<p>Start docker container:</p>
+<p><code>bash
+docker run --name mattermost-dev -d --publish 8065:80 mattermost/platform</code></p>
+</li>
+<li>
+<p>When docker is done fetching the image, open http://localhost:8065/ in your browser.</p>
+</li>
+</ol>
+<h3 id="arch">Arch</h3>
+<ol>
+<li>
+<p>Install Docker using the following commands:</p>
+<p><code>bash
+pacman -S docker
+systemctl enable docker.service
+systemctl start docker.service
+gpasswd -a &lt;username&gt; docker
+newgrp docker</code></p>
+</li>
+<li>
+<p>Start Docker container:</p>
+<p><code>bash
+docker run --name mattermost-dev -d --publish 8065:80 mattermost/platform</code></p>
+</li>
+<li>
+<p>When Docker is done fetching the image, open http://localhost:8065/ in your browser.</p>
+</li>
+</ol>
+<h3 id="additional-notes">Additional Notes</h3>
+<ul>
+<li>
+<p>If you want to work with the latest master from the repository (i.e. not a stable release) you can run the cmd:  </p>
+<p><code>bash
+docker run --name mattermost-dev -d --publish 8065:80 mattermost/platform:dev</code></p>
+</li>
+<li>
+<p>Instructions on how to update your Docker image are found below. </p>
+</li>
+<li>
+<p>If you wish to remove mattermost-dev use:   </p>
+<p><code>bash
+docker stop mattermost-dev
+docker rm -v mattermost-dev</code></p>
+</li>
+<li>
+<p>If you wish to gain access to a shell on the container use:  </p>
+<p><code>bash
+docker exec -ti mattermost-dev /bin/bash</code></p>
+</li>
+</ul>
+<h2 id="configuration-settings">Configuration Settings</h2>
+<p>There are a few configuration settings you might want to adjust when setting up your instance of Mattermost. You can edit them in <code>config.json</code> or <code>config_docker.json</code> if you're running a Docker instance.</p>
+<ul>
+<li><em>EmailSettings</em>:<em>ByPassEmail</em> - If this is set to true, then users on the system will not need to verify their email addresses when signing up. In addition, no emails will ever be sent.  </li>
+<li><em>ServiceSettings</em>:<em>UseLocalStorage</em> - If this is set to true, then your Mattermost server will store uploaded files in the storage directory specified by <em>StorageDirectory</em>. <em>StorageDirectory</em> must be set if <em>UseLocalStorage</em> is set to true.  </li>
+<li><em>ServiceSettings</em>:<em>StorageDirectory</em> - The file path where files will be stored locally if <em>UseLocalStorage</em> is set to true. The operating system user that is running the Mattermost application must have read and write privileges to this directory.  </li>
+<li><em>AWSSettings</em>:<em>S3</em>* - If <em>UseLocalStorage</em> is set to false, and the S3 settings are configured here, then Mattermost will store files in the provided S3 bucket.</li>
+</ul>
+<h3 id="recommended-enable-email">(Recommended) Enable Email</h3>
+<p>The default single-container Docker instance for Mattermost is designed for product evaluation, and sets <code>ByPassEmail=true</code> so the product can run without enabling email, when doing so maybe difficult. </p>
+<p>To see the product's full functionality, <a href="../SMTP-Email-Setup/index.html">enabling SMTP email is recommended</a>.</p>
+<h2 id="upgrading-mattermost">Upgrading Mattermost</h2>
+<h3 id="docker">Docker</h3>
+<p>To upgrade your Docker image to a preview of the latest stable release (NOTE: this will erase all data in the Docker container, including the database):</p>
+<ol>
+<li>
+<p>Stop your Docker container by running: </p>
+<p><code>bash
+docker stop mattermost-dev</code>
+2. Delete your Docker container by running:</p>
+<p><code>bash
+docker rm mattermost-dev</code>
+3. Update your Docker image by running:</p>
+<p><code>bash
+docker pull mattermost/platform</code>
+4. Start your Docker container by running:</p>
+<p><code>bash
+docker run --name mattermost-dev -d --publish 8065:80 mattermost/platform</code></p>
+</li>
+</ol>
+<p>To upgrade to the latest development build on master from the repository replace <code>mattermost/platform</code> with <code>mattermost/platform:dev</code> in the instructions 3) and 4) above. </p></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+                <p>Copyright (c) 2015 Mattermost, Inc. All Rights Reserved.</p>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
